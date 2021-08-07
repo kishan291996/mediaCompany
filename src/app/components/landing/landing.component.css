@@ -1,0 +1,50 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.marginright20{
+  margin-right: 20px;
+}
+.footer{  
+  position: fixed;
+  padding: 15px;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.home{
+  font-size: 20px;
+  font-weight: bold;
+}
+.homediv{
+  padding:25px;
+}
+.aboutdiv{
+  padding:25px;
+}
+.about{
+  font-size: 20px;
+  font-weight: bold;
+}
+.fontsize15{
+  font-size: 15px;
+}
+
+.gallerydiv{
+  padding:25px;
+}
+.gallery{
+  font-size: 20px;
+  font-weight: bold;
+}
+.selected{
+  font-weight: bold;
+  color:white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+.deselected{
+  font-weight: normal;
+}

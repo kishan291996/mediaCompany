@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <span class="marginright20" (click)="menu('home')" [ngClass]="clickedMenu == 'home' ? 'selected' : 'deselected'">Home</span>
+  <span class="marginright20" (click)="menu('gallery')" [ngClass]="clickedMenu == 'gallery' ? 'selected' : 'deselected'" *ngIf="userinfo">Gallery</span>
+  <span class="marginright20" (click)="menu('about')" [ngClass]="clickedMenu == 'about' ? 'selected' : 'deselected'">About Us</span>
+  <span class="example-spacer"></span>
+  <span class="fontsize15" *ngIf="userinfo">{{uname}}({{userid}})</span>
+  <button mat-stroked-button color="primary" *ngIf="!uname && (clickedMenu == 'home' ||
+   clickedMenu == 'about')" (click)="onLogin()"> Login </button>
+  <button mat-stroked-button color="primary" *ngIf="uname && (clickedMenu == 'home' ||
+   clickedMenu == 'about')" (click)="onLogout()"> Logout </button>
+</mat-toolbar>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div *ngIf="clickedMenu == 'home'" class="homediv">
+      <span class="home">Home</span>
+      <app-home></app-home>
+    </div>
+    <div *ngIf="clickedMenu == 'gallery'" class="gallerydiv">
+      <span class="gallery"> Gallery </span>
+      <app-gallery></app-gallery>
+      </div>
+    <div *ngIf="clickedMenu == 'about'" class="aboutdiv">
+      <span class="about">About Us</span>
+      <app-about></app-about>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+  © 2021 Media Monks  Limited. All rights reserved
+</div>

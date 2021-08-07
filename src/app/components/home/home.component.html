@@ -1,0 +1,14 @@
+<p>
+    {{content}}
+</p>
+
+<mat-form-field appearance="outline">
+    <textarea (keyup)="searchUser()" [ngClass]="{'recordSelected':myControl?.value?.length > 1}"
+    type="textarea" [formControl]="myControl" [matAutocomplete]="auto" matInput></textarea>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" (click)="selectedEmployee(option.username)">
+        {{option.username}}
+      </mat-option>
+    </mat-autocomplete>
+  
+  </mat-form-field>
